@@ -5,6 +5,7 @@
 body {
     margin: 0;
     padding: 0;
+  background-color: lightgreen;
 }
 
 section#score {
@@ -22,6 +23,7 @@ section#score {
   float: left;
   width: 64px;
   height: 64px;
+  background-color: lightskyblue;
 }
 
 
@@ -41,12 +43,12 @@ section#score div {
 
 
 .furry {
-  background-image: url('../images/furry.png');
+  background-image: url('../images/duck.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
 .coin {
-  background-image: url('../images/coin.png');
+  background-image: url('../images/bread.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
