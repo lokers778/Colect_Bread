@@ -42,12 +42,12 @@ section#score div {
 
 
 
-.furry {
+.duck {
   background-image: url('../images/duck.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
-.coin {
+.bread {
   background-image: url('../images/bread.png');
   background-repeat: no-repeat;
   background-size: cover;
