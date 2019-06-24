@@ -5,7 +5,7 @@
 body {
     margin: 0;
     padding: 0;
-  background-color: lightgreen;
+  z-index: -4;
 }
 
 section#score {
@@ -75,4 +75,237 @@ section#over pre {
 
 .invisible {
   display: none;
+}
+/*added duckground ...DUCKground .. funny " */
+.header{
+  background-color: #75D2F7;
+  height: 200px;
+  display: flex;
+}
+.nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  font-family: 'Audiowide', cursive;
+  font-size: 30px;
+}
+
+.duckDiv{
+  width: 300px;
+  background-color: #75D2F7;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.duckBody
+{
+  z-index: 3;
+  background-color: gold;
+  height: 100px;
+  width: 80px;
+  border-radius:70%/ 90% 90% 50% 50%;
+  position:relative;
+  border:0.5px solid black;
+
+
+}
+.leftWing{
+  width: 30px;
+  height: 92px;
+  border-radius: 50%;
+  background-color: gold;
+  position: absolute;
+  transform: rotate(45deg);
+  bottom:58px;
+  left:105px;
+  animation-name: wingUpLeft;
+  animation-duration: 1.5s;
+  animation-iteration-count:infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  border:0.5px solid black;
+}
+.rightWing{
+  width: 30px;
+  height: 92px;
+  border-radius: 50%;
+  background-color: gold;
+  position: absolute;
+  transform: rotate(-45deg);
+  left:167px;
+  bottom:58px;
+  animation-name: wingUpRight;
+  animation-duration: 1.5s;
+  animation-iteration-count:infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  border:0.5px solid black;
+
+}
+.duckBody:after
+{
+  z-index: 4;
+  display: block;
+  content:" ";
+  background-color: white;
+  height: 100px;
+  width: 80px;
+  border-radius:70%/ 90% 90% 50% 50%;
+  position:absolute;
+  transform: scale(0.5);
+  border:0.5px solid black;
+}
+.duckHead{
+  background-color: gold;
+  height: 75px;
+  width: 80px;
+  border-radius: 50%;
+  position:absolute;
+  left: 40px;
+  bottom:60px;
+  transform: translate(-50%, 0);
+  z-index: 4;
+  border:0.5px solid black;
+  z-index: 5;
+}
+.rightEye{
+  position:absolute;
+  height: 20px;
+  width: 20px;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  background-color: white;
+  top:15px;
+  right: 13px;
+}
+.rightEye:after{
+  display: block;
+  content:" ";
+  background-color: black;
+  height: 20px;
+  width: 20px;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  position:relative;
+  transform: scale(0.5) translate(9px, 0px);
+  z-index: 1;
+  top:5px;
+  animation-name: moveEyes;
+  animation-duration: 4s;
+  animation-iteration-count:infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+.leftEye{
+  position:absolute;
+  height: 20px;
+  width: 20px;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  background-color: white;
+  right: 47px;
+  top:15px;
+}
+.leftEye:after{
+  display: block;
+  content:" ";
+  background-color: black;
+  height: 20px;
+  width: 20px;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  position:relative;
+  transform: scale(0.5) translate(9px, 0px);
+  z-index: 1;
+  top:5px;
+  animation-name: moveEyes;
+  animation-duration: 4s;
+  animation-iteration-count:infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+.upperBeak{
+  width:20px;
+  height:7px;
+  position: absolute;
+  background-color: red;
+  border-radius: 50%;
+  right: 30px;
+  top: 49px;
+  border:solid 0.5px black;
+  z-index: 7;
+}
+.bottomBeak{
+  width:18px;
+  height:7px;
+  position: absolute;
+  background-color: red;
+  border-radius: 50%;
+  right: 31px;
+  top: 52px;
+  border:solid 0.5px black;
+}
+@keyframes wingUpRight {
+  0%   {transform: rotate(-45deg)}
+
+
+  100% {transform:rotate(-70deg)}
+}
+@keyframes wingUpLeft {
+  0%   {transform: rotate(45deg)}
+
+
+  100% {transform:rotate(70deg)}
+}
+@keyframes moveEyes {
+  0% {transform: scale(0.5) translate(9px, 0px);}
+
+  100%{ transform: scale(0.5) translate(-10px, 0px);}
+}
+.background{
+  background-color: #75D2F7;
+  background-image: url("../images/waterBackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 800px;
+  width: 100%;
+  position:relative;
+}
+.rubberDuck{
+  height: 300px;
+  width: 300px;
+  background-image: url("../images/rubberduck.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position:absolute;
+  bottom:5px;
+  right:110%;
+  animation-name: moveDuck;
+  animation-duration: 14s;
+  animation-iteration-count:infinite;
+  animation-timing-function: linear;
+  z-index: -1;
+}
+.rubberDuck:hover{
+  cursor:pointer;
+}
+@keyframes moveDuck {
+  0%{right: -25%}
+
+  15%{transform: rotate(15deg)}
+
+  30%{transform: rotate(-15deg)}
+  45%{transform: rotate(5deg)}
+  70%{transform: rotate(-10deg)}
+  90%{transform: rotate(0deg)}
+  100%{right:110%;)}
+}
+.background{
+  overflow: hidden;
+  z-index: -2;
 }

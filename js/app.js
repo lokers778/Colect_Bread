@@ -54,15 +54,18 @@ document.addEventListener("DOMContentLoaded", function () {
         this.movingDuck = function (event) {
             switch (event.which) {
                 case 37:
+
                     this.duck.direction = "left";
                     break;
                 case 39:
                     this.duck.direction = "right";
                     break;
                 case 40:
+                    event.preventDefault();
                     this.duck.direction = "up";
                     break;
                 case 38:
+                    event.preventDefault();
                     this.duck.direction = "down";
                     break;
             }
