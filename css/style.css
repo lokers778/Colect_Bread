@@ -5,7 +5,6 @@
 body {
     margin: 0;
     padding: 0;
-  z-index: -4;
 }
 
 section#score {
@@ -59,7 +58,6 @@ section#over {
   height: 100%;
   left: 0;
   top: 0;
-  z-index: 1;
   padding: 10px;
   background-color: rgba(255, 255, 0, 0.75);
 }
@@ -78,11 +76,12 @@ section#over pre {
 }
 /*added duckground ...DUCKground .. funny " */
 .header{
-  background-color: #75D2F7;
+  background-color: #52524d;
   height: 200px;
   display: flex;
 }
 .nav{
+  color:#f69a10;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,7 +92,7 @@ section#over pre {
 
 .duckDiv{
   width: 300px;
-  background-color: #75D2F7;
+  background-color: #52524d;
   height: 100%;
   display: flex;
   justify-content: center;
